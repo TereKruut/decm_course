@@ -94,6 +94,33 @@ make logs SERVICE=airflow-scheduler
 make logs SERVICE=postgres
 ```
 
+## ETL Starter (Lecture 2)
+
+Ensure the shared stack is up
+
+Optional (recommended): attach the devcontainer to the compose network so ETL can resolve `postgres` directly:
+
+```bash
+make devcontainer-join-course-network
+```
+
+Then run ETL from the devcontainer:
+
+```bash
+make etl-bootstrap
+make etl-dry-run
+make etl-backfill-2020-2025
+```
+
+Backfill to current date (useful later with Airflow orchestration):
+
+```bash
+make etl-backfill-2020-today
+```
+
+Detailed ETL notes and precipitation-source investigation:
+- `docs/etl-airviro.md`
+
 ## Environment File
 
 - `.env` is local-only and ignored by git.
