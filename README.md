@@ -110,7 +110,7 @@ Student-facing lecture notes are in:
 
 Instructor-only assessments workflow:
 
-- `docs/lectures/instructor-assessment-workflow.md`
+- keep these materials in your separate private instructor repository (not in this repo)
 
 ## ETL Starter (Lecture 2)
 

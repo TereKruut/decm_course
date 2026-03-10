@@ -15,5 +15,3 @@ This folder contains student-facing lecture/tutorial materials for the course.
 
 Homework briefs and Moodle test question banks are not stored in this repository.
 Use the separate private instructor repository for those files.
-See [Instructor Assessment Workflow](./instructor-assessment-workflow.md).
-
