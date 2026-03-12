@@ -1,4 +1,4 @@
-# Lecture 1: VS Code, Docker, Git, Devcontainers
+# Lecture 3: VS Code, Docker, Git, Devcontainers
 
 ## Audience and Goal
 

@@ -4,9 +4,9 @@ This folder contains student-facing lecture/tutorial materials for the course.
 
 ## Lecture Sequence
 
-1. Lecture 1: VS Code, Docker, Git, and devcontainers fundamentals
-   - [Lecture 1 Overview](./lecture-01/README.md)
-2. Lecture 2: Python ETL and Superset basics
+3. Lecture 3: VS Code, Docker, Git, and devcontainers fundamentals
+   - [Lecture 3 Overview](./lecture-03/README.md)
+4. Lecture 4: Python ETL and Superset basics
    - (to be added)
-3. Lecture 3: Airflow + dbt orchestration and pipeline evolution
+5. Lecture 5: Airflow + dbt orchestration and pipeline evolution
    - (to be added)

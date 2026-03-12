@@ -1,4 +1,4 @@
-# Git Guide (Lecture 1, UI-First)
+# Git Guide (Lecture 3, UI-First)
 
 ## Learning Approach
 
@@ -44,7 +44,7 @@ Reference:
 
 Suggested message style:
 
-1. `docs: add lecture 1 notes`
+1. `docs: add lecture 3 notes`
 2. `fix: update docker command example`
 
 ### 5) Push and sync

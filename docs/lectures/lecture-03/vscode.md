@@ -1,4 +1,4 @@
-# VS Code Guide (Lecture 1)
+# VS Code Guide (Lecture 3)
 
 ## Core Path
 
@@ -27,7 +27,7 @@ Use the Activity Bar on the left:
 1. Explorer: file and folder navigation
 2. Search: find across files
 3. Source Control: git changes, staging, commit, sync
-4. Run and Debug: not central in lecture 1, but useful later
+4. Run and Debug: not central in lecture 3, but useful later
 5. Extensions: install/update extensions
 
 Bottom panel:

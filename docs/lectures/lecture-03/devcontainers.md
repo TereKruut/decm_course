@@ -1,4 +1,4 @@
-# Devcontainers Guide (Lecture 1)
+# Devcontainers Guide (Lecture 3)
 
 ## What a Devcontainer Is
 

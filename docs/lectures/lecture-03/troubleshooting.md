@@ -1,4 +1,4 @@
-# Lecture 1 Troubleshooting
+# Lecture 3 Troubleshooting
 
 Use this checklist before asking for help.
 

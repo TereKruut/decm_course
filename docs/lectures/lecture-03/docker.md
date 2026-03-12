@@ -1,4 +1,4 @@
-# Docker Guide (Lecture 1)
+# Docker Guide (Lecture 3)
 
 ## What Docker Is
 
