@@ -788,7 +788,7 @@ def build_source_records(
             }
         )
 
-    all_records: list[MeasurementRow] = []
+    all_records: dict[tuple[str, int, datetime, str], MeasurementRow] = {}
     for index, (window_start, window_end) in enumerate(windows, start=1):
         if progress is not None:
             progress(
@@ -813,7 +813,18 @@ def build_source_records(
             summary=summary,
             progress=progress,
         )
-        all_records.extend(records)
+        cross_window_duplicates = 0
+        for record in records:
+            key = (
+                record.source_type,
+                record.station_id,
+                record.observed_at,
+                record.indicator_code,
+            )
+            if key in all_records:
+                cross_window_duplicates += 1
+            all_records[key] = record
+        summary.duplicate_measurements += cross_window_duplicates
         if progress is not None:
             progress(
                 {
@@ -826,7 +837,7 @@ def build_source_records(
                     "window_end": window_end.isoformat(),
                     "rows_read_window": summary.rows_read - rows_before,
                     "rows_read_total": summary.rows_read,
-                    "records_normalized_window": len(records),
+                    "records_normalized_window": len(records) - cross_window_duplicates,
                     "records_normalized_total": len(all_records),
                     "duplicates_window": summary.duplicate_measurements - duplicates_before,
                     "duplicates_total": summary.duplicate_measurements,
@@ -850,7 +861,7 @@ def build_source_records(
                 "split_events_total": summary.split_events,
             }
         )
-    return all_records
+    return list(all_records.values())
 
 
 def summarize_indicator_counts(records: list[MeasurementRow]) -> dict[str, int]:
