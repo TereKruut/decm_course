@@ -30,23 +30,23 @@ x-airflow-common: &airflow-common
     _PIP_ADDITIONAL_REQUIREMENTS: ""
   volumes:
     - type: bind
-      source: ${HOST_WORKSPACE}/airflow/dags
+      source: airflow/dags
       target: /opt/airflow/dags
       bind:
         create_host_path: true
     - type: bind
-      source: ${HOST_WORKSPACE}/dbt
+      source: dbt
       target: /opt/airflow/dbt
       bind:
         create_host_path: true
     - type: bind
-      source: ${HOST_WORKSPACE}/etl
+      source: etl
       target: /opt/airflow/etl
       read_only: true
       bind:
         create_host_path: true
     - type: bind
-      source: ${HOST_WORKSPACE}/sql
+      source: sql
       target: /opt/airflow/sql
       read_only: true
       bind:
@@ -76,7 +76,7 @@ services:
     volumes:
       - postgres-data:/var/lib/postgresql/data
       - type: bind
-        source: ${HOST_WORKSPACE}/postgres/init
+        source: postgres/init
         target: /docker-entrypoint-initdb.d
         read_only: true
     healthcheck:
